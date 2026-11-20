@@ -1,0 +1,60 @@
+:root{--beige:#efe6d6;--crema:#f7f2e8;--arena:#d9c9ac;--cafe:#4a3b2a;--verde:#2f4a3a;--dorado:#b08d57;--texto:#3a3025}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',Arial,sans-serif;background:var(--crema);color:var(--texto);line-height:1.6}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--cafe);line-height:1.2}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--dorado);outline-offset:2px}
+.contenedor{max-width:1100px;margin:auto;padding:0 20px}
+/* Navegación */
+header{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 1px 0 var(--arena)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:700;color:var(--cafe)}
+.logo span{color:var(--dorado)}
+.menu{display:flex;gap:26px;align-items:center;list-style:none}
+.menu a{font-size:.95rem;color:var(--verde);padding:6px 2px}
+.menu a:hover{color:var(--dorado)}
+.btn{display:inline-block;background:var(--verde);color:#fff!important;padding:10px 24px;border-radius:30px;border:0;font:inherit;font-weight:500;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--cafe)}
+.btn-dorado{background:var(--dorado)}
+#toggle{display:none;background:none;border:0;font-size:1.8rem;color:var(--cafe);cursor:pointer}
+/* Hero */
+.hero{background:linear-gradient(105deg,rgba(74,59,42,.92),rgba(74,59,42,.55)),repeating-linear-gradient(90deg,#8a7658 0 40px,#9a8667 40px 80px);color:#fff;padding:100px 0 120px}
+.hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.6rem);max-width:620px;margin-bottom:16px}
+.hero p{max-width:520px;margin-bottom:28px;color:#f0e8d8}
+/* Buscador */
+.buscador{background:var(--beige);margin-top:-60px;position:relative;border-radius:16px;padding:28px;box-shadow:0 10px 30px rgba(74,59,42,.18)}
+.buscador h2{font-size:1.5rem;text-align:center;margin-bottom:18px}
+.filtros{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:14px;align-items:end}
+label{font-size:.85rem;font-weight:600;color:var(--cafe);display:block;margin-bottom:4px}
+select{width:100%;padding:12px 16px;border-radius:30px;border:1px solid var(--arena);background:#fff;font:inherit;color:var(--verde)}
+/* Secciones */
+section{padding:70px 0}
+.titulo{text-align:center;margin-bottom:36px}
+.titulo h2{font-size:2rem}
+.titulo p{color:#7a6a55}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px}
+.tarjeta{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 16px rgba(74,59,42,.12)}
+.foto{height:210px;display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:600}
+.f1{background:linear-gradient(160deg,#a99373,#4a3b2a)}.f2{background:linear-gradient(160deg,#c4a77d,#6b5a3e)}.f3{background:linear-gradient(160deg,#8d9a82,#2f4a3a)}
+.cuerpo{padding:18px 20px 22px}
+.etapa{display:inline-block;background:var(--verde);color:#fff;font-size:.8rem;padding:3px 14px;border-radius:20px;margin-bottom:10px}
+.cuerpo h3{font-size:1.3rem;color:var(--verde)}
+.dir{font-size:.85rem;color:#7a6a55;margin-bottom:12px}
+.datos{display:flex;justify-content:space-between;border-top:1px solid var(--arena);padding-top:12px;font-size:.9rem}
+.precio{text-align:right}.precio b{font-size:1.25rem;color:var(--cafe)}
+#vacio{text-align:center;display:none;grid-column:1/-1;color:#7a6a55}
+.nosotros{background:var(--beige)}
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;margin-top:30px}
+.cifras b{font-family:'Playfair Display',Georgia,serif;font-size:2.4rem;color:var(--dorado);display:block}
+form.contacto{max-width:560px;margin:auto;display:grid;gap:14px}
+input,textarea{width:100%;padding:12px 16px;border-radius:12px;border:1px solid var(--arena);font:inherit;background:#fff}
+#mensaje-ok{text-align:center;color:var(--verde);font-weight:600;min-height:1.5em}
+footer{background:var(--cafe);color:var(--arena);text-align:center;padding:26px 20px;font-size:.9rem}
+@media(max-width:760px){
+#toggle{display:block}
+.menu{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:20px;gap:16px;border-bottom:1px solid var(--arena)}
+.menu.abierto{display:flex}
+.filtros{grid-template-columns:1fr}.cifras{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
