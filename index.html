@@ -4,38 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Inmobiliaria</title>
-    <style>
-        body { margin: 0; font-family: Arial, sans-serif; background-color: #f5f5f4; }
-        header { background-color: #14532d; color: white; padding: 30px 20px; text-align: center; }
-        nav { background-color: #111827; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        main { max-width: 900px; margin: auto; padding: 30px 20px; }
-        .tarjetas { display: flex; gap: 15px; flex-wrap: wrap; }
-        .tarjeta { background: white; padding: 20px; border-radius: 8px; flex: 1; min-width: 200px; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
-        footer { background-color: #111827; color: white; text-align: center; padding: 15px; margin-top: 30px; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Sistema Inmobiliaria</h1>
-        <p>Gestión de propiedades, clientes y contratos</p>
-    </header>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="propiedades.html">Propiedades</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
-    <main>
-        <h2>Módulos del sistema</h2>
-        <div class="tarjetas">
-            <div class="tarjeta"><h3>Propiedades</h3><p>Casas, departamentos y terrenos en venta o alquiler.</p></div>
-            <div class="tarjeta"><h3>Clientes</h3><p>Registro de compradores e inquilinos.</p></div>
-            <div class="tarjeta"><h3>Contratos</h3><p>Control de ventas y alquileres.</p></div>
+        <div class="contenedor nav">
+            <a href="index.html" class="logo">Inmo<span>Trujillo</span></a>
+            <button id="toggle" aria-label="Menú" aria-expanded="false">&#9776;</button>
+            <ul id="menu" class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#propiedades">Propiedades</a></li>
+                <li><a href="contacto.html" class="btn">Contacto</a></li>
+            </ul>
         </div>
-        <p>Proyecto creado por Rosita Horna, Instituto "Trujillo".</p>
-    </main>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="contenedor">
+            <h1>Sistema Inmobiliaria</h1>
+            <p>Gestión de propiedades, clientes y contratos. Proyecto creado por Rosita Horna, Instituto "Trujillo".</p>
+            <a href="#propiedades" class="btn btn-dorado">Ver propiedades</a>
+        </div>
+    </section>
+
+    <div class="contenedor">
+        <div class="buscador">
+            <h2>Buscar propiedades</h2>
+            <div class="filtros">
+                <div>
+                    <label for="fDistrito">Distrito</label>
+                    <select id="fDistrito">
+                        <option value="">Todos</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fEtapa">Etapa</label>
+                    <select id="fEtapa">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="fDorm">Dormitorios</label>
+                    <select id="fDorm">
+                        <option value="">Cualquiera</option>
+                    </select>
+                </div>
+                <button id="buscar" type="button" class="btn">Filtrar</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="propiedades">
+        <div class="contenedor">
+            <div class="titulo">
+                <h2>Propiedades disponibles</h2>
+                <p>Casas, departamentos y terrenos en venta o alquiler</p>
+            </div>
+            <div id="lista" class="grid"></div>
+            <p id="vacio">No se encontraron propiedades con esos filtros.</p>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 Rosita Horna</p>
+        <p>&copy; 2026 Rosita Horna - Instituto "Trujillo"</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
