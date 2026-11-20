@@ -2,12 +2,53 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Contacto - Inmobiliaria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Sistema Inmobiliaria</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Contacto</h1>
-    <p>Correo: isaacruzz2024@gmail.com</p>
-    <p>Teléfono: 999 999 999</p>
-    <a href="index.html">Volver al inicio</a>
+    <header>
+        <div class="contenedor nav">
+            <a href="index.html" class="logo">Inmo<span>Trujillo</span></a>
+            <button id="toggle" aria-label="Menú" aria-expanded="false">&#9776;</button>
+            <ul id="menu" class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#propiedades">Propiedades</a></li>
+                <li><a href="contacto.html" class="btn">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <div class="contenedor">
+            <div class="titulo">
+                <h2>Contacto</h2>
+                <p>Correo: isaacruzz2024@gmail.com | Teléfono: 999 999 999</p>
+            </div>
+
+            <form id="formContacto" class="contacto">
+                <div>
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dorado">Enviar mensaje</button>
+                <div id="mensaje-ok"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Rosita Horna - Instituto "Trujillo"</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
